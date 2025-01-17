@@ -23,11 +23,11 @@ jobs:
         run: |
           # Tag the Docker image with the branch name or tag
           IMAGE_TAG=${{ github.ref_name }}
-          docker build -t praneethmvsp/disease_prediction:${IMAGE_TAG} .
+          docker build -t praneethmvsp/engine_breakpower:${IMAGE_TAG} .
 
       # Step 4: Push the Docker image to Docker Hub
       - name: Push Docker Image
         run: |
           # Push the tagged image
           IMAGE_TAG=${{ github.ref_name }}
-          docker push praneethmvsp/disease_prediction:${IMAGE_TAG}
+          docker push praneethmvsp/engine_breakpower:${IMAGE_TAG}
